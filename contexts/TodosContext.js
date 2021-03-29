@@ -38,7 +38,9 @@ const TodosProvider = ({ children }) => {
         body: JSON.stringify(updatedTodo),
         headers: { 'Content-Type': 'application/json' },
       });
-      const newTodo = await res.json();
+      // *** do we need this??? ***
+      // const newTodo = await res.json();
+      
       setTodos((prevTodos) => {
         const existingTodos = [...prevTodos];
         const existingTodo = existingTodos.find(
